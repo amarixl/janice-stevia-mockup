@@ -1,0 +1,1604 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Foire aux questions · Janice Stevia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+<style>
+:root {
+  --prune:        #2D002B;
+  --prune-hover:  #4A0047;
+  --black:        #0E0E0E;
+  --black-hover:  #2A2A2A;
+  --white:        #FFFFFF;
+  --ink:          #1A1A1A;
+  --ink-soft:     #555555;
+  --grey-mid:     #888888;
+  --grey-light:   #B8B8B8;
+  --border:       #E0E0E0;
+  --divider:      #EEEEEE;
+  --or:           #C69346;
+
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body:    'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --container:    1440px;
+  --pad-section:  120px;
+  --pad-side:     80px;
+  --pad-side-md:  48px;
+  --pad-side-sm:  24px;
+  --measure:      560px;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink);
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img { display: block; max-width: 100%; height: auto; }
+button { font: inherit; cursor: pointer; border: 0; background: none; padding: 0; color: inherit; }
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--prune);
+  margin: 0;
+}
+
+.h1 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(38px, 5.4vw, 60px);
+  line-height: 1.08;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(28px, 3vw, 38px);
+  line-height: 1.15;
+  letter-spacing: -0.005em;
+  margin: 0;
+}
+.h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(20px, 2vw, 24px);
+  line-height: 1.25;
+  letter-spacing: -0.005em;
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  padding: 18px 40px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  border-radius: 0;
+  transition: background 220ms ease, color 220ms ease, border-color 220ms ease;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.btn--ghost {
+  background: var(--black);
+  color: var(--white);
+  border: 1px solid var(--black);
+}
+.btn--ghost:hover { background: var(--white); color: var(--black); border-color: var(--black); }
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: var(--pad-side);
+  padding-right: var(--pad-side);
+}
+
+/* ============================================================
+   ANNOUNCEMENT + HEADER
+   ============================================================ */
+.announce {
+  background: var(--prune);
+  color: var(--white);
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.announce__dot { opacity: 0.5; margin: 0 14px; }
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--white);
+  border-bottom: 0.5px solid var(--divider);
+}
+.header__inner {
+  height: 104px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 48px;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding-left: var(--pad-side);
+  padding-right: var(--pad-side);
+}
+.brand { display: flex; align-items: center; }
+.brand__logo { height: 80px; width: auto; display: block; }
+.nav { display: flex; justify-content: center; gap: 52px; }
+.nav__item {
+  position: relative;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--ink);
+  padding: 6px 0;
+  transition: color 180ms ease;
+}
+.nav__item::after {
+  content: "";
+  position: absolute;
+  left: 50%; bottom: -2px;
+  width: 0; height: 1px;
+  background: var(--prune);
+  transition: width 240ms ease, left 240ms ease;
+}
+.nav__item:hover { color: var(--prune); }
+.nav__item:hover::after { width: 100%; left: 0; }
+.nav__chevron { display: inline-block; margin-left: 6px; vertical-align: middle; }
+.icons { display: flex; align-items: center; gap: 22px; }
+.icons__lang {
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.icons__lang .active { color: var(--prune); }
+.icons__lang .sep { opacity: 0.35; margin: 0 6px; }
+.icon-btn {
+  width: 24px; height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  transition: color 180ms ease;
+}
+.icon-btn:hover { color: var(--prune); }
+.menu-btn { display: none; }
+
+/* ============================================================
+   BREADCRUMB
+   ============================================================ */
+.breadcrumb {
+  padding: 28px 0 0;
+}
+.breadcrumb__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--pad-side);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--grey-mid);
+}
+.breadcrumb__inner a { transition: color 180ms ease; }
+.breadcrumb__inner a:hover { color: var(--prune); }
+.breadcrumb__sep { margin: 0 8px; opacity: 0.5; }
+.breadcrumb__current { color: var(--ink); }
+
+/* ============================================================
+   AIDE — HERO (page header + contact options)
+   ============================================================ */
+.help-hero {
+  padding: 56px 0 64px;
+  background: var(--white);
+  text-align: center;
+}
+.help-hero__inner {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 var(--pad-side);
+}
+.help-hero__eyebrow { margin-bottom: 20px; }
+.help-hero__title { margin-bottom: 16px; }
+.help-hero__sub {
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+  margin: 0 0 48px;
+}
+.help-contact {
+  display: flex;
+  justify-content: center;
+  gap: 64px;
+}
+.help-contact__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  max-width: 240px;
+}
+.help-contact__icon {
+  width: 48px; height: 48px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--prune);
+}
+.help-contact__label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--ink);
+}
+.help-contact__detail {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--ink-soft);
+  margin: 0;
+}
+.help-contact__detail strong { color: var(--ink); font-weight: 500; }
+.help-contact a.help-contact__link {
+  font-size: 14px;
+  color: var(--ink-soft);
+  border-bottom: 1px solid transparent;
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.help-contact a.help-contact__link:hover { color: var(--prune); border-color: var(--prune); }
+
+/* ============================================================
+   FAQ MAIN — title + search
+   ============================================================ */
+.faq-main {
+  padding: 0 0 var(--pad-section);
+  background: var(--white);
+}
+.faq-main__head {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 64px;
+  padding: 0 var(--pad-side);
+}
+.faq-main__head .h1 { margin-bottom: 14px; }
+.faq-main__head p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin: 0 0 36px;
+}
+.faq-search {
+  position: relative;
+}
+.faq-search input {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--ink);
+  padding: 16px 20px 16px 48px;
+  border: 1px solid var(--border);
+  border-radius: 0;
+  background: var(--white);
+  transition: border-color 180ms ease;
+}
+.faq-search input::placeholder { color: var(--grey-mid); }
+.faq-search input:focus { outline: none; border-color: var(--prune); }
+.faq-search svg {
+  position: absolute;
+  left: 18px; top: 50%;
+  transform: translateY(-50%);
+  color: var(--grey-mid);
+  pointer-events: none;
+}
+.faq-search__count {
+  margin-top: 12px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--grey-mid);
+  min-height: 16px;
+}
+
+/* ============================================================
+   FAQ LAYOUT — category nav + accordion content
+   ============================================================ */
+.faq-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 64px;
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--pad-side);
+  align-items: start;
+}
+
+.faq-nav {
+  position: sticky;
+  top: 144px;
+}
+.faq-nav__list { display: flex; flex-direction: column; gap: 2px; }
+.faq-nav__item {
+  display: block;
+  position: relative;
+  padding: 11px 0 11px 18px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--grey-mid);
+  border-left: 2px solid var(--divider);
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.faq-nav__item:hover { color: var(--ink); }
+.faq-nav__item--active {
+  color: var(--prune);
+  border-left-color: var(--prune);
+}
+.faq-nav__help {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 0.5px solid var(--divider);
+}
+.faq-nav__help p {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--grey-mid);
+  margin: 0 0 8px;
+}
+.faq-nav__help a {
+  font-size: 14px;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+  transition: color 180ms ease, border-color 180ms ease;
+}
+.faq-nav__help a:hover { color: var(--prune); border-color: var(--prune); }
+
+.faq-content { min-width: 0; }
+
+.faq-category { margin-bottom: 72px; scroll-margin-top: 130px; }
+.faq-category:last-child { margin-bottom: 0; }
+.faq-category__title {
+  margin-bottom: 8px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--ink);
+}
+
+.faq-list { }
+.faq-item {
+  border-bottom: 0.5px solid var(--divider);
+  scroll-margin-top: 130px;
+}
+.faq-item__q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 22px 2px;
+  text-align: left;
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--ink);
+  transition: color 180ms ease;
+}
+.faq-item__q:hover { color: var(--prune); }
+.faq-item__icon {
+  flex: none;
+  width: 18px; height: 18px;
+  position: relative;
+  color: var(--ink);
+  transition: color 180ms ease;
+}
+.faq-item__q:hover .faq-item__icon { color: var(--prune); }
+.faq-item__icon::before, .faq-item__icon::after {
+  content: "";
+  position: absolute;
+  background: currentColor;
+  transition: transform 220ms ease;
+}
+.faq-item__icon::before { left: 0; top: 8px; width: 18px; height: 1.4px; }
+.faq-item__icon::after { left: 8px; top: 0; width: 1.4px; height: 18px; }
+.faq-item--open .faq-item__icon::after { transform: rotate(90deg); }
+
+.faq-item__a {
+  height: 0;
+  overflow: hidden;
+  transition: height 250ms ease-out;
+}
+.faq-item__a-inner {
+  padding: 0 2px 26px;
+  max-width: var(--measure);
+}
+.faq-item__a-inner p {
+  font-size: 15.5px;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+}
+.faq-item__a-inner p:last-child { margin-bottom: 0; }
+.faq-item__a-inner a { color: var(--prune); border-bottom: 1px solid var(--prune); }
+.faq-item__a-inner strong { color: var(--ink); font-weight: 500; }
+.faq-item__a-sub {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 15px;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+.faq-item__a-list {
+  margin: 0 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.faq-item__a-list li {
+  position: relative;
+  padding-left: 18px;
+  font-size: 15.5px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.faq-item__a-list li::before {
+  content: "";
+  position: absolute;
+  left: 0; top: 9px;
+  width: 5px; height: 5px;
+  background: var(--prune);
+  border-radius: 50%;
+}
+
+.faq-empty {
+  display: none;
+  padding: 64px 0;
+  text-align: center;
+  color: var(--grey-mid);
+}
+.faq-empty p { font-size: 15px; margin: 0; }
+.faq-empty.is-visible { display: block; }
+
+[data-faq-hidden="true"] { display: none !important; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding: var(--pad-section) 0 0;
+}
+.footer__inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--pad-side);
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 64px;
+}
+.footer__brand {
+  font-family: var(--font-display);
+  font-size: 24px;
+  margin: 0 0 10px;
+}
+.footer__tagline {
+  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+}
+.footer__title {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin: 0 0 18px;
+  color: rgba(255,255,255,0.85);
+}
+.footer__list { display: flex; flex-direction: column; gap: 12px; }
+.footer__list a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.65);
+  transition: color 180ms ease;
+}
+.footer__list a:hover { color: var(--white); }
+.footer__sub {
+  border-top: 0.5px solid rgba(255,255,255,0.15);
+  padding: 24px var(--pad-side) 32px;
+  max-width: var(--container);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 12px;
+  color: rgba(255,255,255,0.45);
+}
+.footer__social { display: flex; gap: 16px; }
+.footer__social a { color: rgba(255,255,255,0.65); transition: color 180ms ease; }
+.footer__social a:hover { color: var(--white); }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1024px) {
+  :root {
+    --pad-side: var(--pad-side-md);
+    --pad-section: 88px;
+  }
+  .header__inner { gap: 24px; }
+  .nav { gap: 32px; }
+
+  .faq-layout { grid-template-columns: 1fr; gap: 32px; }
+  .faq-nav {
+    position: static;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    padding-bottom: 24px;
+    border-bottom: 0.5px solid var(--divider);
+    margin-bottom: 16px;
+  }
+  .faq-nav__list { flex-direction: row; flex-wrap: wrap; gap: 8px 24px; }
+  .faq-nav__item { border-left: none; border-bottom: 2px solid var(--divider); padding: 6px 0; }
+  .faq-nav__item--active { border-left-color: transparent; border-bottom-color: var(--prune); }
+  .faq-nav__help { display: none; }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --pad-side: var(--pad-side-sm);
+    --pad-section: 64px;
+  }
+  .nav, .icons__lang { display: none; }
+  .menu-btn {
+    display: inline-flex;
+    width: 24px; height: 24px;
+    align-items: center;
+    justify-content: center;
+    color: var(--ink);
+  }
+  .header__inner {
+    height: 64px;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+  }
+  .brand { grid-column: 2; justify-content: center; }
+  .brand__logo { height: 52px; }
+  .icons { gap: 16px; }
+
+  .help-contact { flex-direction: column; gap: 32px; align-items: center; }
+
+  .faq-main__head { margin-bottom: 40px; }
+
+  .footer__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .footer__sub {
+    flex-direction: column;
+    gap: 18px;
+    text-align: center;
+    padding-bottom: 32px;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="announce">
+  <span>Livraison gratuite au Canada et aux États-Unis dès 100 $</span>
+  <span class="announce__dot">·</span>
+  <span>Retours sous 45 jours</span>
+  <span class="announce__dot">·</span>
+  <span>Conçu au Québec</span>
+</div>
+
+<header class="header">
+  <div class="header__inner">
+    <a class="brand" href="index.html" aria-label="Janice Stevia — Accueil">
+      <img class="brand__logo" src="data:image/webp;base64,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" alt="Janice Stevia" />
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="collection.html" class="nav__item">Boutique</a>
+      <a href="#" class="nav__item">Nouveautés</a>
+      <a href="lookbook.html" class="nav__item">Lookbook</a>
+      <a href="histoire.html" class="nav__item">
+        À propos
+        <svg class="nav__chevron" width="8" height="8" viewBox="0 0 8 8" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M1 2.5 L4 5.5 L7 2.5"/>
+        </svg>
+      </a>
+    </nav>
+    <div class="icons">
+      <span class="icons__lang">
+        <span class="active">FR</span><span class="sep">/</span><span>EN</span>
+      </span>
+      <a href="#" class="icon-btn" aria-label="Recherche">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+        </svg>
+      </a>
+      <a href="#" class="icon-btn" aria-label="Mon compte">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>
+        </svg>
+      </a>
+      <a href="#" class="icon-btn" aria-label="Panier">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M5 7h14l-1.2 12.2a2 2 0 0 1-2 1.8h-7.6a2 2 0 0 1-2-1.8L5 7Z"/>
+          <path d="M9 7V5a3 3 0 0 1 6 0v2"/>
+        </svg>
+      </a>
+      <button class="menu-btn" aria-label="Menu" type="button">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M3 6h18M3 12h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<nav class="breadcrumb" aria-label="Fil d'Ariane">
+  <div class="breadcrumb__inner">
+    <a href="index.html">Accueil</a><span class="breadcrumb__sep">/</span><span class="breadcrumb__current">Foire aux questions</span>
+  </div>
+</nav>
+
+
+<!-- AIDE — HERO -->
+<section class="help-hero" aria-label="Aide">
+  <div class="help-hero__inner">
+    <p class="eyebrow help-hero__eyebrow">Aide</p>
+    <h1 class="h1 help-hero__title">On est là pour vous aider.</h1>
+    <p class="help-hero__sub">Consultez notre foire aux questions ci-dessous, ou écrivez-nous directement.</p>
+
+    <div class="help-contact">
+      <div class="help-contact__item">
+        <span class="help-contact__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <path d="M4 5h16v11H8l-4 4V5Z"/>
+          </svg>
+        </span>
+        <span class="help-contact__label">Clavardage en direct</span>
+        <p class="help-contact__detail">Échangez avec nous instantanément, où que vous soyez dans votre parcours.</p>
+      </div>
+      <div class="help-contact__item">
+        <span class="help-contact__icon" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+            <rect x="3" y="5" width="18" height="14" rx="1"/><path d="m4 6.5 8 6.5 8-6.5"/>
+          </svg>
+        </span>
+        <a class="help-contact__link" href="mailto:hello@janicesteviadesign.com">hello@janicesteviadesign.com</a>
+        <p class="help-contact__detail">Écrivez-nous, nous vous répondons sous 24 à 48 h ouvrables.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ MAIN -->
+<section class="faq-main" aria-label="Foire aux questions">
+
+  <div class="faq-main__head">
+    <h2 class="h1">Foire aux questions</h2>
+    <p>Tout ce qu'il faut savoir avant, pendant et après votre commande.</p>
+
+    <div class="faq-search">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>
+      </svg>
+      <input type="text" id="faqSearch" placeholder="Rechercher une question…" aria-label="Rechercher dans la FAQ" autocomplete="off" />
+      <p class="faq-search__count" id="faqSearchCount"></p>
+    </div>
+  </div>
+
+  <div class="faq-layout">
+
+    <!-- CATEGORY NAV -->
+    <nav class="faq-nav" aria-label="Catégories">
+      <ul class="faq-nav__list" id="faqNavList">
+        <li><a href="#cat-matieres" class="faq-nav__item">Nos matières</a></li>
+        <li><a href="#cat-creations" class="faq-nav__item">Nos créations</a></li>
+        <li><a href="#cat-commandes" class="faq-nav__item">Commandes &amp; paiement</a></li>
+        <li><a href="#cat-cartes-cadeaux" class="faq-nav__item">Cartes-cadeaux</a></li>
+        <li><a href="#cat-livraison" class="faq-nav__item">Livraison</a></li>
+        <li><a href="#cat-retours" class="faq-nav__item">Retours &amp; échanges</a></li>
+        <li><a href="#cat-garantie" class="faq-nav__item">Garantie</a></li>
+        <li><a href="#cat-marque" class="faq-nav__item">Notre marque</a></li>
+        <li><a href="#cat-service" class="faq-nav__item">Service client</a></li>
+      </ul>
+      <div class="faq-nav__help">
+        <p>Besoin d'aide?</p>
+        <a href="mailto:hello@janicesteviadesign.com">hello@janicesteviadesign.com</a>
+      </div>
+    </nav>
+
+    <!-- CONTENT -->
+    <div class="faq-content" id="faqContent">
+
+      <p class="faq-empty" id="faqEmpty"><span>Aucun résultat pour cette recherche. Essayez un autre mot-clé ou écrivez-nous directement.</span></p>
+
+      <!-- 1. NOS MATIÈRES -->
+      <div class="faq-category" id="cat-matieres" data-faq-category="Nos matières">
+        <h3 class="h3 faq-category__title">Nos matières</h3>
+        <div class="faq-list">
+
+          <div class="faq-item" id="matiere-composition">
+            <button class="faq-item__q" type="button">
+              <span>De quelle matière sont fabriqués vos sacs?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Chaque création Janice Stevia Design est réalisée en cuir vegan à base d'eau recyclé : 58 % polyester recyclé, 37 % polyuréthane recyclé à base d'eau, 5 % Kaolin. Aucun solvant, aucun produit chimique nocif, aucune matière d'origine animale.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="matiere-distinction">
+            <button class="faq-item__q" type="button">
+              <span>En quoi ce matériau se distingue-t-il des alternatives conventionnelles?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Le polyuréthane (PU) à base d'eau recyclé représente une évolution significative par rapport aux PU traditionnels à base de solvants. Son empreinte chimique est réduite, son toucher est souple et sa résistance à la déformation lui permet de conserver sa structure au fil du temps — y compris sous un usage quotidien intensif.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="matiere-comportement">
+            <button class="faq-item__q" type="button">
+              <span>Comment ce matériau se comporte-t-il à l'usage?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Des tests de résistance ont été réalisés en atelier : pressée et sollicitée à répétition pour simuler une utilisation quotidienne, la matière reprend sa forme initiale sans laisser de marque ni de pli visible. Elle allie légèreté, souplesse et durabilité.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="matiere-pourquoi-vegan">
+            <button class="faq-item__q" type="button">
+              <span>Pourquoi avoir choisi le cuir vegan plutôt qu'un cuir traditionnel?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Un choix ancré dans une conviction : concevoir des objets qui durent, qui ne compromettent pas le bien-être animal et qui respectent les ressources. Le cuir vegan recyclé à base d'eau est aujourd'hui l'alternative la plus rigoureuse disponible pour une maroquinerie d'exigence. Pour en apprendre davantage, visitez la page <a href="qualite.html">Notre qualité</a>.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="matiere-certification">
+            <button class="faq-item__q" type="button">
+              <span>Vos créations sont-elles certifiées véganes?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Oui. La marque Janice Stevia détient la certification PETA – Approved Vegan, qui atteste de l'absence totale de matières d'origine animale dans nos collections.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="matiere-longevite">
+            <button class="faq-item__q" type="button">
+              <span>Quelle est la longévité d'une pièce?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Nous estimons la durée de vie de nos créations à environ cinq ans d'utilisation quotidienne — une longévité que nous attribuons à la qualité du matériau, à la robustesse des assemblages et à la rigueur du contrôle exercé à chaque étape de production.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="matiere-entretien">
+            <button class="faq-item__q" type="button">
+              <span>Comment prendre soin de ma pièce?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Pour préserver la beauté et la durabilité de votre sac Janice Stevia Design, nettoyez-le délicatement à l'aide d'un chiffon doux légèrement humide. En cas de tache, utilisez un savon doux dilué dans de l'eau tiède, puis essuyez avec un chiffon propre avant de laisser sécher naturellement à l'air libre.</p>
+                <p>Évitez l'utilisation de produits agressifs tels que l'eau de Javel, l'alcool, l'acétone ou tout autre solvant, ainsi que les brosses abrasives et les produits destinés au cuir animal. Pour une conservation optimale, rangez votre sac dans son pochon de protection livré avec la commande, dans un endroit sec à l'abri de l'humidité et de la lumière directe du soleil.</p>
+                <p>Lorsque vous ne l'utilisez pas, remplissez-le de papier de soie ou d'un tissu doux afin qu'il conserve sa forme et évitez de le comprimer sous des objets lourds. Un entretien régulier contribuera à préserver son élégance et à prolonger sa durée de vie.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="matiere-pluie">
+            <button class="faq-item__q" type="button">
+              <span>Le matériau résiste-t-il à la pluie?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Le cuir PU recyclé utilisé dans nos créations offre une bonne résistance à l'eau et aux éclaboussures du quotidien.</p>
+                <p>Cependant, évitez de le placer près d'une source de chaleur directe, comme un radiateur ou un sèche-cheveux, car cela pourrait altérer le matériau.</p>
+                <p>Pour préserver l'apparence et la durabilité de votre sac, il est préférable d'éviter une exposition prolongée à de fortes pluies ou à une humidité excessive.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 2. NOS CRÉATIONS -->
+      <div class="faq-category" id="cat-creations" data-faq-category="Nos créations">
+        <h3 class="h3 faq-category__title">Nos créations</h3>
+        <div class="faq-list">
+
+          <div class="faq-item" id="creation-dimensions">
+            <button class="faq-item__q" type="button">
+              <span>Quelles sont les dimensions de vos modèles?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p><strong>Audace :</strong> 28 cm (largeur) × 42 cm (hauteur) × 14 cm (profondeur) — format 16 pouces. Accueille un ordinateur de 15 ou 16 pouces ainsi que des documents A4.</p>
+                <p><strong>Joyce :</strong> 38,5 cm (largeur) × 31,5 cm (hauteur) × 14 cm (profondeur) — format 15 pouces. L'espace central, plus large, accueille aussi un ordinateur jusqu'à 17 pouces, ainsi que des documents A4 et format légal.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="creation-capacite-joyce">
+            <button class="faq-item__q" type="button">
+              <span>Quelle est la capacité du Joyce Tote?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Le Joyce Tote est conçu pour la femme dont la journée ne s'arrête pas au bureau. Il peut accueillir des chaussures jusqu'à la pointure 12 (46 pour hommes et 42,5 pour femmes en Europe) — un atout pensé pour les journées doubles, de la réunion du matin au dîner du soir.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="creation-doublure">
+            <button class="faq-item__q" type="button">
+              <span>Quelle est la doublure de vos créations?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>La doublure est en polyester recyclé, fabriqué à partir de bouteilles recyclées — un choix aligné avec nos valeurs écologiques. Plusieurs poches intérieures accueillent un téléphone, des ports stylos, un attache-clé et une poche zippée pour protéger vos essentiels.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="creation-quincaillerie">
+            <button class="faq-item__q" type="button">
+              <span>Les accessoires métalliques résistent-ils dans le temps?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Les accessoires métalliques sont sélectionnés selon les mêmes critères d'exigence que le matériau principal. Ils sont conçus pour traverser la durée de vie de la pièce sans altération visible. Nous avons choisi la finition dorée pour apporter un aspect chic et éclatant.</p>
+                <ul class="faq-item__a-list">
+                  <li>Tests de résistance exceptionnelle à l'usure et aux rayures</li>
+                  <li>Excellente protection contre l'oxydation et la corrosion</li>
+                  <li>Propriétés antibactériennes durables</li>
+                  <li>Finitions aux couleurs stables et éclatantes dans le temps</li>
+                  <li>Procédé écologique, sans métaux lourds ni substances polluantes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="creation-conception">
+            <button class="faq-item__q" type="button">
+              <span>Comment vos collections sont-elles conçues?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Chaque pièce naît d'une observation. Janice Stevia dessine ses créations de A à Z, en s'inspirant du quotidien des femmes — leurs déplacements, leurs contraintes, leur façon d'habiter l'élégance. La créativité est le moteur de différenciation de la maison, ce qui explique que les collections évoluent avec soin, sans précipitation.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="creation-fabrication">
+            <button class="faq-item__q" type="button">
+              <span>Où vos pièces sont-elles fabriquées?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Les créations Janice Stevia sont produites dans deux ateliers situés en Chine, identifiés et retenus après trois ans de recherches et d'essais qualité rigoureux. La production en petites séries — un choix délibéré — permet un contrôle individuel de chaque pièce avant expédition.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 3. COMMANDES & PAIEMENT -->
+      <div class="faq-category" id="cat-commandes" data-faq-category="Commandes &amp; paiement">
+        <h3 class="h3 faq-category__title">Commandes &amp; paiement</h3>
+        <div class="faq-list">
+
+          <div class="faq-item" id="commande-paiements">
+            <button class="faq-item__q" type="button">
+              <span>Quels modes de paiement acceptez-vous?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Carte Visa, Mastercard, American Express, Shop Pay, Apple Pay et Google Pay.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="commande-versements">
+            <button class="faq-item__q" type="button">
+              <span>Proposez-vous le paiement en plusieurs versements?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Nous offrons Shop Pay, qui permet 4 versements sans intérêt.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="commande-delai-preparation">
+            <button class="faq-item__q" type="button">
+              <span>Quel est le délai de préparation d'une commande avant expédition?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Toute commande est traitée dans un délai de 1 à 5 jours ouvrables avant expédition. Une confirmation d'expédition vous est transmise par courriel dès que votre commande est en route.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="commande-securite">
+            <button class="faq-item__q" type="button">
+              <span>Mes informations de paiement sont-elles sécurisées?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Toutes les transactions sont traitées via un protocole de chiffrement SSL. Aucune donnée bancaire n'est conservée sur nos serveurs.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="commande-modification">
+            <button class="faq-item__q" type="button">
+              <span>Puis-je modifier ou annuler ma commande après validation?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Pour toute demande de modification ou d'annulation, écrivez-nous à <a href="mailto:hello@janicesteviadesign.com">hello@janicesteviadesign.com</a> dans les meilleurs délais. Nous ferons notre possible pour intervenir avant l'expédition.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 4. CARTES-CADEAUX & CADEAUX -->
+      <div class="faq-category" id="cat-cartes-cadeaux" data-faq-category="Cartes-cadeaux">
+        <h3 class="h3 faq-category__title">Cartes-cadeaux &amp; cadeaux</h3>
+        <div class="faq-list">
+
+          <div class="faq-item" id="cadeau-fonctionnement">
+            <button class="faq-item__q" type="button">
+              <span>Comment fonctionne la carte-cadeau Janice Stevia?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>La carte-cadeau est envoyée par courriel à l'adresse indiquée lors de l'achat. Elle peut ensuite être transmise à la personne de votre choix. L'ensemble du processus ne prend que quelques minutes.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="cadeau-montants">
+            <button class="faq-item__q" type="button">
+              <span>En quels montants sont disponibles les cartes-cadeaux?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Les montants disponibles sont 50 $, 100 $, 150 $ et 200 $.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="cadeau-validite">
+            <button class="faq-item__q" type="button">
+              <span>La carte-cadeau est-elle valable indéfiniment?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Les cartes-cadeaux sont valables un an à compter de la date d'achat.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="cadeau-plusieurs-fois">
+            <button class="faq-item__q" type="button">
+              <span>Peut-on utiliser la carte-cadeau en plusieurs fois?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Oui, tant qu'il reste un solde disponible sur la carte. Pour simplifier l'expérience, nous recommandons toutefois d'utiliser la totalité du montant en un seul achat.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="cadeau-cumul-cartes">
+            <button class="faq-item__q" type="button">
+              <span>Peut-on cumuler plusieurs cartes-cadeaux sur une même commande?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Oui, il est possible d'utiliser plusieurs cartes-cadeaux pour régler un même achat.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="cadeau-cumul-promo">
+            <button class="faq-item__q" type="button">
+              <span>La carte-cadeau est-elle cumulable avec un code promotionnel?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Oui. La carte-cadeau fonctionne comme un mode de paiement et peut être utilisée conjointement avec un code de réduction.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="cadeau-acheter-cadeau">
+            <button class="faq-item__q" type="button">
+              <span>Peut-on utiliser une carte-cadeau pour en acheter une autre?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Non, les cartes-cadeaux ne peuvent pas être utilisées pour l'achat d'une autre carte-cadeau.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="cadeau-recharge">
+            <button class="faq-item__q" type="button">
+              <span>Peut-on recharger une carte-cadeau?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Non, les cartes-cadeaux ne sont pas rechargeables. Une fois le solde épuisé, un nouvel achat est nécessaire.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="cadeau-solde">
+            <button class="faq-item__q" type="button">
+              <span>Comment connaître le solde restant sur ma carte-cadeau?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Il n'est pas possible de consulter le solde directement en ligne. Pour connaître votre solde, écrivez-nous à <a href="mailto:hello@janicesteviadesign.com">hello@janicesteviadesign.com</a> en indiquant le code de votre carte.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 5. LIVRAISON -->
+      <div class="faq-category" id="cat-livraison" data-faq-category="Livraison">
+        <h3 class="h3 faq-category__title">Livraison</h3>
+        <div class="faq-list">
+
+          <div class="faq-item" id="livraison-offerte">
+            <button class="faq-item__q" type="button">
+              <span>La livraison est-elle offerte?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>La livraison standard est offerte à partir de 100 $ pour toute commande destinée au Canada ou aux États-Unis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="livraison-delais">
+            <button class="faq-item__q" type="button">
+              <span>Quels sont les délais de livraison?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Le délai de traitement est de 1 à 3 jours ouvrables avant expédition. Une fois votre commande expédiée, le délai de livraison est de 2 à 10 jours ouvrables selon l'option choisie et la destination.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="livraison-express">
+            <button class="faq-item__q" type="button">
+              <span>Proposez-vous la livraison express?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Oui. En nous contactant directement avant de finaliser votre commande, une expédition urgente peut être organisée moyennant un supplément de 10 $. Les commandes reçues avant 11 h peuvent être livrées le lendemain; dans les autres cas, le délai est de 48 heures.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="livraison-international">
+            <button class="faq-item__q" type="button">
+              <span>Livrez-vous à l'international?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Oui. Janice Stevia Design expédie vers les États-Unis, la France et la majorité des pays de l'Union européenne. Pour vérifier la disponibilité de la livraison dans votre pays, écrivez-nous à <a href="mailto:hello@janicesteviadesign.com">hello@janicesteviadesign.com</a> avant de passer commande.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="livraison-douane">
+            <button class="faq-item__q" type="button">
+              <span>Des frais de douane peuvent-ils s'appliquer?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Pour les commandes internationales, des taxes et droits de douane peuvent être facturés à la réception du colis dans le pays de destination. Ces frais sont hors de notre contrôle et restent à la charge de la cliente. Les prix affichés sur le site ne les incluent pas.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="livraison-suivi">
+            <button class="faq-item__q" type="button">
+              <span>Comment suivre ma commande?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Un numéro de suivi vous est transmis par courriel dès l'expédition de votre commande, afin de vous permettre de suivre son acheminement en temps réel. Vous pouvez également clavarder avec notre service client sur le site pour le suivi de votre commande.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="livraison-envois-separes">
+            <button class="faq-item__q" type="button">
+              <span>Est-il possible de recevoir plusieurs articles en un seul envoi?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Si votre commande comprend plusieurs articles, il est possible qu'ils soient expédiés séparément. Vous recevrez une notification à chaque envoi.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 6. RETOURS & ÉCHANGES -->
+      <div class="faq-category" id="cat-retours" data-faq-category="Retours &amp; échanges">
+        <h3 class="h3 faq-category__title">Retours &amp; échanges</h3>
+        <div class="faq-list">
+
+          <div class="faq-item" id="retour-politique">
+            <button class="faq-item__q" type="button">
+              <span>Quelle est votre politique de retour?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Toute pièce peut faire l'objet d'un retour dans un délai de 45 jours à compter de la date de réception. L'article doit être retourné dans son état d'origine, non porté et accompagné de son emballage d'origine. Pour initier un retour, écrivez-nous à <a href="mailto:hello@janicesteviadesign.com">hello@janicesteviadesign.com</a> afin d'obtenir un numéro d'autorisation et les instructions d'acheminement.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="retour-echange">
+            <button class="faq-item__q" type="button">
+              <span>Est-il possible d'échanger une pièce?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Oui. Les échanges sont proposés pour les articles reçus dans une taille ou une couleur incorrecte, ainsi que pour les pièces présentant un défaut ou un dommage à la réception. Les échanges sont soumis à la disponibilité des stocks. Si le modèle souhaité n'est pas disponible, un remboursement sera émis.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="retour-remboursement">
+            <button class="faq-item__q" type="button">
+              <span>Quel est le délai de remboursement?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Une fois la pièce retournée réceptionnée et inspectée, le remboursement est crédité sur le mode de paiement d'origine dans un délai de 10 jours ouvrables, selon les délais de traitement de votre institution financière.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="retour-frais">
+            <button class="faq-item__q" type="button">
+              <span>Les frais de retour sont-ils à ma charge?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Oui, les frais de retour sont à la charge de la cliente et seront déduits du montant remboursé — sauf dans le cas d'une pièce défectueuse ou d'une erreur de notre part, auquel cas les frais sont intégralement pris en charge.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="retour-exclusions">
+            <button class="faq-item__q" type="button">
+              <span>Y a-t-il des articles non éligibles au retour?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Les articles personnalisés, les articles en promotion et les articles en vente finale ne peuvent pas être retournés ni échangés, sauf en cas de défaut de fabrication avéré.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="retour-piece-endommagee">
+            <button class="faq-item__q" type="button">
+              <span>Que faire si je reçois une pièce endommagée ou défectueuse?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Dans l'éventualité d'une pièce reçue endommagée ou présentant un défaut de fabrication, nous vous invitons à nous écrire à <a href="mailto:hello@janicesteviadesign.com">hello@janicesteviadesign.com</a> dans les 48 heures suivant la réception, en joignant des photographies du produit. Une solution sera proposée dans les meilleurs délais.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="retour-bandouliere">
+            <button class="faq-item__q" type="button">
+              <span>La bandoulière ou un élément de ma pièce est endommagé — que faire?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Nous n'assurons pas encore la vente de pièces détachées séparément. Pour toute situation de ce type, écrivez-nous à <a href="mailto:hello@janicesteviadesign.com">hello@janicesteviadesign.com</a> — chaque demande est examinée individuellement.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 7. GARANTIE -->
+      <div class="faq-category" id="cat-garantie" data-faq-category="Garantie">
+        <h3 class="h3 faq-category__title">Garantie</h3>
+        <div class="faq-list">
+
+          <div class="faq-item" id="garantie-couverture">
+            <button class="faq-item__q" type="button">
+              <span>Vos créations bénéficient-elles d'une garantie?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p class="faq-item__a-sub">Sacs et accessoires</p>
+                <p>Tous les sacs et accessoires sont couverts par une garantie de 18 mois à compter de la date d'achat, sur présentation d'une preuve d'achat valide.</p>
+                <p><strong>La garantie couvre :</strong></p>
+                <ul class="faq-item__a-list">
+                  <li>Tout défaut de fabrication affectant la qualité ou le bon fonctionnement du produit</li>
+                  <li>Les problèmes liés aux fermetures éclair</li>
+                  <li>Les défauts de coutures</li>
+                  <li>Les défauts d'assemblage des composantes</li>
+                </ul>
+                <p><strong>La garantie ne couvre pas :</strong></p>
+                <ul class="faq-item__a-list">
+                  <li>L'usure normale résultant de l'utilisation</li>
+                  <li>Les accrocs, coupures ou déchirures</li>
+                  <li>Les égratignures ou marques sur la quincaillerie</li>
+                  <li>Le transfert de couleur ou de teinture</li>
+                  <li>La déformation du produit</li>
+                  <li>Les dommages causés par un entretien inadéquat ou des modifications apportées au produit</li>
+                  <li>Les dommages résultant d'une mauvaise utilisation, d'un accident ou d'une négligence</li>
+                </ul>
+                <p>Cette garantie s'applique uniquement aux défauts de fabrication et ne couvre pas les dommages attribuables à l'usage normal ou à des causes externes.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 8. NOTRE MARQUE -->
+      <div class="faq-category" id="cat-marque" data-faq-category="Notre marque">
+        <h3 class="h3 faq-category__title">Notre marque</h3>
+        <div class="faq-list">
+
+          <div class="faq-item" id="marque-origine">
+            <button class="faq-item__q" type="button">
+              <span>Qui est à l'origine de Janice Stevia?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Janice Stevia Design est fondée par Janice Stevia, designer, coach en image et style, et entrepreneure établie à Montréal. Pour en apprendre davantage sur son parcours et la vision qui anime la maison, visitez la page <a href="histoire.html">Notre histoire</a>.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="marque-pourquoi">
+            <button class="faq-item__q" type="button">
+              <span>Pourquoi choisir la marque Janice Stevia?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Parce que chaque pièce est pensée pour une femme qui refuse de choisir entre la fonctionnalité, l'élégance et ses convictions. La production en petites séries garantit un niveau de contrôle que les grandes manufactures ne peuvent pas offrir. Et derrière chaque commande, il y a une relation réelle — pas un centre de service anonyme.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="marque-causes">
+            <button class="faq-item__q" type="button">
+              <span>Soutenez-vous des causes ou des organismes?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Janice Stevia contribue ponctuellement à des organismes au Canada, en Afrique et en Europe, sous forme de pièces offertes ou de versements sur les ventes. La discrétion fait partie de notre façon d'agir — nous préférons les gestes aux annonces.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 9. SERVICE CLIENT -->
+      <div class="faq-category" id="cat-service" data-faq-category="Service client">
+        <h3 class="h3 faq-category__title">Service client</h3>
+        <div class="faq-list">
+
+          <div class="faq-item" id="service-contact">
+            <button class="faq-item__q" type="button">
+              <span>Comment vous contacter?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Notre équipe est joignable par courriel à <a href="mailto:hello@janicesteviadesign.com">hello@janicesteviadesign.com</a> ou par téléphone au 438 223-2106, du lundi au vendredi.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" id="service-delai-reponse">
+            <button class="faq-item__q" type="button">
+              <span>Dans quel délai obtiendrai-je une réponse?</span>
+              <span class="faq-item__icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-item__a">
+              <div class="faq-item__a-inner">
+                <p>Notre équipe traite chaque demande du lundi au vendredi et s'engage à répondre dans un délai de 24 à 48 heures ouvrables.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</section>
+
+
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <p class="footer__brand">Janice Stevia</p>
+      <p class="footer__tagline">Le sac à la hauteur de votre journée.</p>
+    </div>
+    <div>
+      <p class="footer__title">Boutique</p>
+      <ul class="footer__list">
+        <li><a href="collection.html">Boutique</a></li>
+        <li><a href="#">Nouveautés</a></li>
+        <li><a href="lookbook.html">Lookbook</a></li>
+        <li><a href="#">Carte-cadeau</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__title">À propos</p>
+      <ul class="footer__list">
+        <li><a href="histoire.html">Notre histoire</a></li>
+        <li><a href="valeurs.html">Nos valeurs</a></li>
+        <li><a href="qualite.html">Notre qualité</a></li>
+        <li><a href="#">Programme ambassadrice</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="footer__title">Aide</p>
+      <ul class="footer__list">
+        <li><a href="mailto:hello@janicesteviadesign.com">Contactez-nous</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="faq.html#cat-livraison">Livraison</a></li>
+        <li><a href="faq.html#cat-retours">Retours</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__sub">
+    <span>© 2026 Janice Stevia · Conçu et fabriqué au Québec</span>
+    <div class="footer__social" aria-label="Réseaux sociaux">
+      <a href="https://www.instagram.com/janicestevia_design/" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="Facebook">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <path d="M15 8h-2a2 2 0 0 0-2 2v2H9v3h2v6h3v-6h2.5l.5-3H14v-1.5c0-.5.5-.5 1-.5h1V8h-1z"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="YouTube">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+          <rect x="2.5" y="6" width="19" height="12" rx="3"/>
+          <path d="M10 9.5v5l4.5-2.5L10 9.5z" fill="currentColor" stroke="none"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function () {
+  var items = Array.prototype.slice.call(document.querySelectorAll('.faq-item'));
+  var categories = Array.prototype.slice.call(document.querySelectorAll('.faq-category'));
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('.faq-nav__item'));
+  var searchInput = document.getElementById('faqSearch');
+  var searchCount = document.getElementById('faqSearchCount');
+  var emptyState = document.getElementById('faqEmpty');
+
+  /* ---- Accordion ---- */
+  function setOpen(item, open) {
+    var panel = item.querySelector('.faq-item__a');
+    var inner = item.querySelector('.faq-item__a-inner');
+    item.classList.toggle('faq-item--open', open);
+    if (open) {
+      panel.style.height = inner.offsetHeight + 'px';
+    } else {
+      panel.style.height = '0px';
+    }
+  }
+
+  items.forEach(function (item) {
+    var btn = item.querySelector('.faq-item__q');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.addEventListener('click', function () {
+      var isOpen = item.classList.contains('faq-item--open');
+      setOpen(item, !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+      if (!isOpen && history.replaceState) {
+        history.replaceState(null, '', '#' + item.id);
+      }
+    });
+  });
+
+  /* Recalculate open panel heights on resize (text reflow) */
+  window.addEventListener('resize', function () {
+    items.forEach(function (item) {
+      if (item.classList.contains('faq-item--open')) {
+        var panel = item.querySelector('.faq-item__a');
+        var inner = item.querySelector('.faq-item__a-inner');
+        panel.style.height = inner.offsetHeight + 'px';
+      }
+    });
+  });
+
+  /* ---- Deep link on load (#question-id) ---- */
+  function openFromHash() {
+    var hash = window.location.hash.replace('#', '');
+    if (!hash) return;
+    var target = document.getElementById(hash);
+    if (target && target.classList.contains('faq-item')) {
+      setOpen(target, true);
+      target.querySelector('.faq-item__q').setAttribute('aria-expanded', 'true');
+      window.setTimeout(function () {
+        target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 60);
+    }
+  }
+  openFromHash();
+  window.addEventListener('hashchange', openFromHash);
+
+  /* ---- Search filter ---- */
+  function normalize(str) {
+    return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  function runSearch() {
+    var q = normalize(searchInput.value.trim());
+    var visibleCount = 0;
+
+    items.forEach(function (item) {
+      var text = normalize(item.textContent);
+      var match = q === '' || text.indexOf(q) !== -1;
+      item.setAttribute('data-faq-hidden', match ? 'false' : 'true');
+      if (match) visibleCount++;
+    });
+
+    categories.forEach(function (cat) {
+      var visibleItems = cat.querySelectorAll('.faq-item[data-faq-hidden="false"]');
+      cat.setAttribute('data-faq-hidden', visibleItems.length === 0 ? 'true' : 'false');
+    });
+
+    if (q === '') {
+      searchCount.textContent = '';
+    } else {
+      searchCount.textContent = visibleCount + (visibleCount === 1 ? ' résultat' : ' résultats') + ' pour « ' + searchInput.value.trim() + ' »';
+    }
+
+    emptyState.classList.toggle('is-visible', visibleCount === 0);
+  }
+
+  searchInput.addEventListener('input', runSearch);
+
+  /* ---- Active category nav on scroll ---- */
+  if ('IntersectionObserver' in window) {
+    var observer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var link = document.querySelector('.faq-nav__item[href="#' + entry.target.id + '"]');
+        if (!link) return;
+        if (entry.isIntersecting) {
+          navLinks.forEach(function (l) { l.classList.remove('faq-nav__item--active'); });
+          link.classList.add('faq-nav__item--active');
+        }
+      });
+    }, { rootMargin: '-30% 0px -55% 0px' });
+
+    categories.forEach(function (cat) { observer.observe(cat); });
+  }
+})();
+</script>
+
+</body>
+</html>
